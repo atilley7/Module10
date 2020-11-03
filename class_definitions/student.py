@@ -5,6 +5,8 @@ class Student:
             raise ValueError
         if not fname.isalpha():
             raise ValueError
+        if not major.isalpha():
+            raise ValueError
 
         self.last_name = lname
         self.first_name = fname
