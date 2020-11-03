@@ -3,7 +3,8 @@ class Student:
     def __init__(self, lname, fname, major, gpa=0.0):
         if not lname.isalpha():
             raise ValueError
-
+        if not fname.isalpha():
+            raise ValueError
 
         self.last_name = lname
         self.first_name = fname
