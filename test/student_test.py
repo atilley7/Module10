@@ -21,8 +21,12 @@ class MyTestCase(unittest.TestCase):
         assert student.major == 'Business'
         assert student.gpa == 4.0
 
-    def  test_student_str(self):
-         self.assertEqual(str(self.student) , 'Tilley, Avery has major Business with gpa: 4.0')
+    def test_student_str(self):
+        self.assertEqual(str(self.student), 'Tilley, Avery has major Business with gpa: 4.0')
+
+    def test_object_not_created_error_last_name(self):
+        with self.assertRaises(ValueError):
+            p = s.Student('123', 'Avery', 'Business')
 
 if __name__ == '__main__':
     unittest.main()
