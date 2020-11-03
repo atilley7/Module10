@@ -1,7 +1,7 @@
 class Student:
     """Student class"""
     def __init__(self, lname, fname, major, gpa=0.0):
-        if not lname.alpha():
+        if not lname.isalpha():
             raise ValueError
 
 
